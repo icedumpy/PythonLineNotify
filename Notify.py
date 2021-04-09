@@ -57,5 +57,5 @@ def main(username, message):
     send_message(token, message)
 #%%
 if __name__ == "__main__":
-    # main("Ice", "Hello World!\nIcelnw")
+    main("Ice", "Hello World!\nIcelnw")
     # main("Ice", message)
