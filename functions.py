@@ -52,7 +52,8 @@ def show_tokens():
     for username, token in zip(data["username"], data["token"]):
         print(f"{username}: {token}")
 
-def send_message(token, message):
+def send_message(username, message):
+    token=get_token(username)
     url = 'https://notify-api.line.me/api/notify'
     headers = {'content-type':'application/x-www-form-urlencoded',
                'Authorization':f'Bearer {token}'}

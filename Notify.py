@@ -1,5 +1,4 @@
-from functions import get_token, send_message
+from functions import send_message
 
 if __name__ == "__main__":
-    token = get_token("Ice")
-    send_message(token, "Hello World")
+    send_message("Ice", "Hello World")
