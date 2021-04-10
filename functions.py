@@ -13,13 +13,11 @@ def save_json(path, data):
         json.dump(data, file)
 
 def load_token():
-    with open("tokens.json", "r") as file:
-        data = json.load(file)
+    data = load_json("tokens.json")
     return data
 
 def save_token(data):
-    with open("tokens.json", "w") as file:
-        json.dump(data, file)
+    save_json("tokens.json", data)
 
 def update_token(username, token):
     # Load json | Create new dict
