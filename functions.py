@@ -79,5 +79,7 @@ def get_covid_today():
                 message = f"\n{UpdateDate.strftime('%d')} {UpdateDate.strftime('%B')} {UpdateDate.strftime('%Y')}\n\n"+"\n".join([f"{key}: {int(value):,}" if key not in ["UpdateDate", "Source", "DevBy", "SeverBy"] else f"{key}: {value}" for key, value in response.json().items()])
                 save_json(os.path.join("Covid-stats", str(TodayDate)+".json"), response.json())
                 return True, message
+            else:
+                return False, ""
     else:
         return False, ""
